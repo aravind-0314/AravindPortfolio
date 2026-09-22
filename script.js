@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const modalNext = document.getElementById("modalNext");
     const modalCounter = document.getElementById("modalCounter");
 
-    // Support the new project-gallery-card class
     const cards = document.querySelectorAll(
         ".project-gallery-card, .gallery-card"
     );
@@ -44,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const gallery = [];
 
-    // Collect all images
     cards.forEach(function (card) {
 
         const image = card.getAttribute("data-image");
@@ -82,7 +80,6 @@ document.addEventListener("DOMContentLoaded", function () {
         modalImage.alt = item.title;
 
         modalTitle.textContent = item.title;
-
         modalDescription.textContent = item.description;
 
         modalCounter.textContent =
@@ -106,7 +103,6 @@ document.addEventListener("DOMContentLoaded", function () {
         card.addEventListener("click", function (event) {
 
             event.preventDefault();
-
             event.stopPropagation();
 
             openImage(index);
@@ -167,7 +163,6 @@ document.addEventListener("DOMContentLoaded", function () {
         modalNext.addEventListener("click", function (event) {
 
             event.preventDefault();
-
             event.stopPropagation();
 
             nextImage();
@@ -186,7 +181,6 @@ document.addEventListener("DOMContentLoaded", function () {
         modalPrev.addEventListener("click", function (event) {
 
             event.preventDefault();
-
             event.stopPropagation();
 
             previousImage();
@@ -220,7 +214,6 @@ document.addEventListener("DOMContentLoaded", function () {
         modalClose.addEventListener("click", function (event) {
 
             event.preventDefault();
-
             event.stopPropagation();
 
             closeModal();
